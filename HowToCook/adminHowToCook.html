@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>HowToCook 관리자 페이지</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+
+        <legend>How To Cook/ Vegan Admin Page</legend>
+
+        <form action="./insert.php" method="POST" enctype="multipart/form-data">
+            <input type="file" name="img">
+            
+            <p>
+                <label>category: </label>
+                <input type="text" name="cat">
+            </p>
+            
+            <p>
+                <label>food title: </label>
+                <input type="text" name="title">    
+            </p>
+
+            <p>
+                <label>food sub: </label>
+                <input type="text" name="sub">
+            </p>
+            
+            <p>
+                <label>ingredient: </label>
+                <textarea name="ing" cols="30" rows="5"></textarea>
+            </p>
+
+            <p>
+                <label>step: </label>
+                <textarea name="step"  cols="30" rows="5"></textarea>
+            </p>
+
+
+            <p>
+                <input type="submit">
+            </p>
+
+            
+        </form>
+    </body>
+</html>

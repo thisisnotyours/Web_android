@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>This is Page Tab</title>
+
+        <style>
+            label{display: inline-block; width: 6em; text-align: right;}
+        </style>
+    </head>
+
+
+
+
+    <body>
+
+        <h2>This Http Test Page</h2>
+
+        <fieldset>
+            <legend>Get Method Test</legend>
+            
+            <!-- ./ : 같은폴더 안에 -->
+            <!-- getTest.php?name=Kim&msg=Hello+world -->
+            <!-- GET 방식 -->
+            <form action="./getTest.php" method="GET">
+                <p>
+                    <label for="in_name">Name : </label>
+                    <input type="text" id="in_name" name="name">  
+                </p>
+                
+                <p>
+                    <label for="in_msg">Message : </label>
+                    <input type="text" id="in_msg" name="msg">  
+                </p>
+
+                <p>
+                    <!-- form(틀)요소의 action속성에 지정한 파일을 실행하는 버튼 -->
+                    <input type="submit">
+                    <input type="reset">
+                </p>
+            </form>
+
+        </fieldset>
+
+        <!-- POST 방식 -->
+        <fieldset>
+            <legend>POST METHOD TEST</legend>
+
+            <form action="./postTest.php" method="POST">
+                <p>
+                    <label for="in_name">Name : </label>
+                    <input type="text" id="in_name" name="name">  
+                </p>
+                
+                <p>
+                    <label for="in_msg">Message : </label>
+                    <input type="text" id="in_msg" name="msg">  
+                </p>
+
+                <p>
+                    <!-- form요소의 action속성에 지정한 파일을 실행하는 버튼 -->
+                    <input type="submit">
+                    <input type="reset">
+                </p>
+            </form>
+
+        </fieldset>
+
+        <!-- post Data with File -->
+        <fieldset>
+            <legend>Image File Upload</legend>
+
+            <form action="./uploadFile.php" method="POST" enctype="multipart/form-data">
+                <p>
+                    <label>이미지 파일 : </label>
+                    <input type="file" name="img">
+                </p>
+                <p>
+                    <input type="submit">
+                    <input type="reset">
+                </p>
+            </form>
+          
+        </fieldset>
+        <!-- enctype="multipart/form-data" : 파일을 전송할때 -->
+
+
+        <!-- form- 안드로이에서의 stream, url 같은 기능 -->
+        <!-- 글씨와 이미지 동시에 전달받기 -->
+        <fieldset>
+            <legend>POST METHOD REQUEST DATA with File</legend>
+            <form action="./postDataWithFile.php" method="POST" enctype="multipart/form-data">
+
+                <p>
+                    <label for="">작성자 : </label>
+                    <input type="text" id="in_name" name="name">
+                </p>
+
+                <p>
+                    <label for="in_msg">내용 : </label>
+                    <textarea name="msg" id="in_msg" cols="30" rows="5"></textarea>
+                </p>
+
+                <p>
+                    <label>첨부파일 : </label>
+                    <input type="file" name="img">
+                </p>
+
+                <p>
+                    <input type="submit">
+                    <input type="reset">
+                </p>
+
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <legend>Load Data</legend>
+            <form action="./loadDataFromDB.php" method="GET">
+                <input type="submit" value="게시판 보기">
+            </form>
+        </fieldset>
+    </body>
+
+</html>
